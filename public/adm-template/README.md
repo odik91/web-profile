@@ -1,167 +1,69 @@
-# [Soft UI Dashboard](http://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html?ref=readme-sud) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/soft-ui-dashboard&text=Check%20Soft%20UI%20Dashboard%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#softdesign%20#html%20https://www.creative-tim.com/product/soft-ui-dashboard) [![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/FhCJCaHdQa)
+<a href="http://www.bootstrapdash.com/demo/purple-admin-free" target="_blank"><img src="screenshot.jpg"></a>
 
-![version](https://img.shields.io/badge/version-1.0.6-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/soft-ui-dashboard.svg)](https://github.com/creativetimofficial/soft-ui-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/soft-ui-dashboard.svg)](https://github.com/creativetimofficial/soft-ui-dashboard/issues?q=is%3Aissue+is%3Aclosed)
+<h1>PurpleAdmin-Free-Admin-Template</h1>
+Purple Admin is a free responsive admin template built with Bootstrap 5. The template has colorful, attractive yet simple and elegant design. The template is well crafted, with all the components neatly and carefully designed and arranged within the template.
 
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/450/original/opt_sd_free_thumbnail.jpg?1617715816)
+Purple Admin is packed with all the features that fit your needs but not cramped with components you would not even use. It is an excellent fit to build admin panels, e-commerce systems,  project management systems, CMS or CRM.
 
-Most complex and innovative Dashboard Made by [Creative Tim](https://creative-tim.com/). Check our latest Free Bootstrap 5 Dashboard.
+Although the template has a design like none other, it is easily customizable to suit your requirements. Purple Admin comes with a clean and well-commented code that makes it easy to work with the template. Thus making it an ideal pick for jump starting your project.
 
-Designed for those who like bold elements and beautiful websites. Made of hundred of elements, designed blocks and fully coded pages, Soft UI Dashboard is ready to help you create stunning websites and webapps.
 
-We created many examples for pages like Sign In, Profile and so on. Just choose between a Basic Design, an illustration or a cover and you are good to go!
+<h1>Credits:</h1>
 
-**Fully Coded Elements**
+- Bootstrap 5
+- Material Design Icons
+- jQuery
+- Gulp
+- Chart.js
 
-Soft UI Dashboard is built with over 70 frontend individual elements, like buttons, inputs, navbars, navtabs, cards or alerts, giving you the freedom of choosing and combining. All components can take variations in colour, that you can easily modify using SASS files and classes.
+<h1>Browser Support:</h1>
 
-You will save a lot of time going from prototyping to full-functional code, because all elements are implemented.
-This Free Bootstrap 5 Dashboard is coming with prebuilt design blocks, so the development process is seamless,
-switching from our pages to the real website is very easy to be done.
+Purple Admin is designed to work flawlessly with all the latest and modern web browsers.
 
-View [all components here](https://www.creative-tim.com/learning-lab/bootstrap/alerts/soft-ui-dashboard?ref=readme-sud).
+- Chrome (latest)
+- FireFox (latest)
+- Safari (latest)
+- Opera (latest)
+- IE10+  
 
-**Documentation built by Developers**
+<h1>License Information:</h1>
 
-Each element is well presented in a very complex documentation.
-You can read more about the <a href="https://www.creative-tim.com/learning-lab/bootstrap/overview/soft-ui-dashboard" target="_blank">documentation here</a>.
 
-**Example Pages**
+Purple Admin is released under MIT license. Purple Admin is a free Bootstrap 5 admin template developed from BootstrapDash. Feel free to download it, use it, share it, get creative with it.
 
-If you want to get inspiration or just show something directly to your clients,
-you can jump start your development with our pre-built example pages. You will be able
-to quickly set up the basic structure for your web project.
-View <a href="https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html" target="_blank">example pages here</a>.
+<h1>How to use Purple Admin?</h1>
 
-**HELPFUL LINKS**
 
-- View <a href="https://github.com/creativetimofficial/soft-ui-dashboard" target="_blank">Github Repository</a>
+1 - Click the Clone or Download button in GitHub and download as a ZIP file or you can enter the command git clone https://github.com/BootstrapDash/PurpleAdmin-Free-Admin-Template.git in you terminal to get a copy of this template.
 
-- Check <a href="https://www.creative-tim.com/faq" target="_blank">FAQ Page</a>
+2 - After the files have been downloaded you will get a folder with all the required files
 
-#### Special thanks
-During the development of this dashboard, we have used many existing resources from awesome developers. We want to thank them for providing their tools open source:
-- [Bootstrap 5](https://www.getbootstrap.com)- Open source front end framework
-- [Popper.js](https://popper.js.org/) - Kickass library used to manage poppers
+3 - You can install all the dependencies in the template by running the command npm install. All the required files are in the node modules.
 
-Let us know your thoughts below. And good luck with development!
+4 - Find the file named index.html, check what all components you need. Open the file in a text editor and you can start editing.
 
-## Table of Contents
+5 - Now that your project has now kick-started, all you need to do now is to code, code, and code to your heart's content.
 
-* [Versions](#versions)
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Technical Support or Questions](#technical-support-or-questions)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
+<h1>How to Contribute?:</h1>
 
-## Versions
 
-[<img src="https://s3.amazonaws.com/creativetim_bucket/github/html.png" width="60" height="60" />](https://www.creative-tim.com/product/soft-ui-dashboard?ref=readme-sud)
+We love your contributions and we welcome them wholeheartedly. We believe the more the merrier.
+To contribute make sure you have a Node.js and npm installed. Now run the command gulp --version. If the command returns with the Gulp version number, it means you have Gulp installed. If not you need to run the command npm install --global gulp-cli to install Gulp.
 
-| HTML |
-| --- |
-| [![Soft UI Dashboard HTML](https://s3.amazonaws.com/creativetim_bucket/products/450/thumb/opt_sd_free_thumbnail.jpg?1617715816)](http://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html?ref=readme-sud)
+<h2>Next</h2>
 
-## Demo
-
-- [Profile page](http://demos.creative-tim.com/soft-ui-dashboard/pages/profile.html?ref=readme-sud)
-- [Sign in page](http://demos.creative-tim.com/soft-ui-dashboard/pages/sign-in.html?ref=readme-sud)
-- [Sign up page](https://demos.creative-tim.com/soft-ui-dashboard/pages/sign-up.html?ref=readme-sud)
-
-[View More](https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html?ref=readme-sud).
-
-## Quick start
-
-Quick start options:
-
-- Download from [Creative Tim](https://www.creative-tim.com/product/soft-ui-dashboard?ref=readme-sud).
-
-## Terminal Commands
-
-1. Download and Install NodeJs from [NodeJs Official Page](https://nodejs.org/en/download/).
-2. Navigate to the root / directory and run npm install to install our local dependencies.
-
-## Documentation
-The documentation for the Soft UI Dashboard is hosted at our [website](https://www.creative-tim.com/learning-lab/bootstrap/overview/soft-ui-dashboard?ref=readme-sud).
-
-### What's included
-
-Within the download you'll find the following directories and files:
-
-```
-soft-ui-dashboard
-    ├── assets
-    │   ├── css
-    │   ├── fonts
-    │   ├── img
-    │   ├── js
-    │   │   ├── core
-    │   │   ├── plugins
-    │   │   └── soft-ui-dashboard.js
-    │   │   └── soft-ui-dashboard.js.map
-    │   │   └── soft-ui-dashboard.min.js
-    │   └── scss
-    │       ├── soft-ui-dashboard
-    │       └── soft-ui-dashboard.scss
-    ├── docs
-    │   ├── documentation.html
-    ├── pages
-    ├── CHANGELOG.md
-    ├── gulpfile.js
-    ├── package.json
-```
-
-## Browser Support
-
-At present, we officially aim to support the last two versions of the following browsers:
-
-<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
-
-## Resources
-- [Live Preview](https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html?ref=readme-sud)
-- [Download Page](https://www.creative-tim.com/product/soft-ui-dashboard?ref=readme-sud)
-- Documentation is [here](https://www.creative-tim.com/learning-lab/bootstrap/overview/soft-ui-dashboard?ref=readme-sud)
-- [License Agreement](https://www.creative-tim.com/license?ref=readme-sud)
-- [Support](https://www.creative-tim.com/contact-us?ref=readme-sud)
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/soft-ui-dashboard/issues)
-
-## Reporting Issues
-We use GitHub Issues as the official bug tracker for the Soft UI Dashboard. Here are some advices for our users that want to report an issue:
-
-1. Make sure that you are using the latest version of the Soft UI Dashboard. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/soft-ui-dashboard?ref=readme-sud).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
-
-## Technical Support or Questions
-
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-sud) instead of opening an issue.
-
-## Licensing
-
-- Copyright 2022 [Creative Tim](https://www.creative-tim.com?ref=readme-sud)
-- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-sud)
-
-## Useful Links
-
-- [More products](https://www.creative-tim.com/templates?ref=readme-sud) from Creative Tim
-
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-
-- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-sud) from Creative Tim
-
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-sud) (earn money)
-
-##### Social Media
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Instagram: <https://instagram.com/creativetimofficial>
+After Gulp has been installed, follow the steps below to contribute.
+  <br>
+	1 - Fork and clone the repo of Purple Admin.
+  <br>
+	2 - Run the command npm install to install all the dependencies.
+  <br>
+	3 - Enter the command gulp serve. This will open Purple Admin in your default browser.
+  <br>
+	4 - Make your valuable contribution
+  <br>
+	5 - Submit a pull request.
+  <hr>
+	Do you need a template with more features and functionalities? Get more with our collection of the premium template with more plugins, eye catching animations, UI components, and sample pages all fitting together with a high-quality design.
+Visit
+  <a href="https://www.bootstrapdash.com" target="_blank">https://www.bootstrapdash.com</a> for more admin templates.
