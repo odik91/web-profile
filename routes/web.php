@@ -40,10 +40,15 @@ Route::group(['prefix' => 'admin'], function () {
     Route::post('/personal-info', [AboutController::class, 'addPersonalInfo'])->name('about.addPersonalInfo');
     Route::match(['put', 'patch'], '/personal-info/{id}', [AboutController::class, 'editPersonalinfo'])->name('about.editPersonalInfo');
     Route::post('/expertise-info', [AboutController::class, 'addExpertise'])->name('about.addExpertise');
-    Route::match(['put', 'patch'], '/expertise-info/{id}', [AboutController::class, 'editExpertise'])->name('about.editExpertise');
-
+    Route::match(['put', 'patch'], '/expertise-info/{id}', [AboutController::class, 'editExpertise'])->name('about.editExpertise'); 
 
     Route::resource('/resume', ResumeController::class);
+    Route::post('/education-info', [ResumeController::class, 'addEducation'])->name('resume.addEducation');
+    Route::match(['put', 'patch'], '/education-info/{id}', [ResumeController::class, 'editEducation'])->name('resume.editEducation');
+    Route::post('/ability', [ResumeController::class, 'addAbility'])->name('resume.addAbility');
+    Route::match(['put', 'patch'], '/ability/{id}', [ResumeController::class, 'editAbility'])->name('resume.editAbility');
+    Route::post('/languages', [ResumeController::class, 'addLanguage'])->name('resume.addLanguage');
+    Route::match(['put', 'patch'], '/languages/{id}', [ResumeController::class, 'editLanguage'])->name('resume.editLanguage');
 });
 
 Route::resource('/', publicController::class);

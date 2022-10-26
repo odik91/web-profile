@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ability;
+use App\Models\Education;
 use App\Models\ElevatorPicth;
+use App\Models\Experience;
 use App\Models\Expertise;
 use App\Models\introModel;
+use App\Models\Language;
 use App\Models\PersonalInfo;
 use App\Models\skillListModel;
 use App\Models\socialMediaModel;
@@ -26,7 +30,11 @@ class publicController extends Controller
         $elevator = ElevatorPicth::first();
         $personalInfo = PersonalInfo::first();
         $expertises = Expertise::orderBy('id', 'asc')->get();
-        return view('portfolio.index', compact('title', 'intro', 'skillLists', 'socialMedias', 'elevator', 'personalInfo', 'expertises'));
+        $experiences = Experience::orderBy('id', 'asc')->get();
+        $educations = Education::orderBy('id', 'asc')->get();
+        $abilities = Ability::orderBy('id', 'asc')->get();
+        $languages = Language::orderBy('id', 'asc')->get();
+        return view('portfolio.index', compact('title', 'intro', 'skillLists', 'socialMedias', 'elevator', 'personalInfo', 'expertises', 'experiences', 'educations', 'abilities', 'languages'));
     }
 
     /**

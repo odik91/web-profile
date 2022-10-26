@@ -95,7 +95,8 @@
         <p class="mt-20">
           {{ ucfirst($elevator['elevator']) }}
         </p>
-        <a href="{{ $elevator['cv'] }}" target="_blank" class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</a>
+        <a href="{{ $elevator['cv'] }}" target="_blank" class="btn btn-outline-danger"><i
+            class="icon-down-circled2 "></i>Download My CV</a>
       </div>
       <div class="col-lg-4 about-card">
         <h3 class="font-weight-light">Personal Info</h3>
@@ -103,16 +104,17 @@
         <ul class="mt40 info list-unstyled">
           <li><span>Birthdate</span> : {{ $personalInfo['birthdate'] }}</li>
           <li><span>Email</span> : {{ $personalInfo['email'] }}</li>
-          <li><span>Phone</span> : {{ $personalInfo['phone'] }} <span class="text-muted">(+62 for outside Indonesia)</span></li>
+          <li><span>Phone</span> : {{ $personalInfo['phone'] }} <span class="text-muted">(+62 for outside
+              Indonesia)</span></li>
           <li><span>Address</span> : {{ $personalInfo['address'] }}</li>
         </ul>
         <ul class="social-icons pt-3">
           @foreach ($socialMedias as $socialMedia)
-          <li class="social-item">
-            <a class="social-link" href="{{ $socialMedia['link'] }}" target="_blank">
-              <i class="{{ $socialMedia['icon'] }} mdi-24px" aria-hidden="true"></i>
-            </a>
-            </li>              
+            <li class="social-item">
+              <a class="social-link" href="{{ $socialMedia['link'] }}" target="_blank">
+                <i class="{{ $socialMedia['icon'] }} mdi-24px" aria-hidden="true"></i>
+              </a>
+            </li>
           @endforeach
         </ul>
       </div>
@@ -120,14 +122,14 @@
         <h3 class="font-weight-light">My Expertise</h3>
         <span class="line mb-5"></span>
         @foreach ($expertises as $expertise)
-        <div class="row">
-          <div class="col-1 text-danger pt-1"><i class="{{ $expertise['icon'] }} mdi-36px"></i></div>
-          <div class="col-10 ml-auto mr-3">
-            <h6>{{ $expertise['expertise'] }}</h6>
-            <p class="subtitle"> {{ ucfirst($expertise['description']) }}</p>
-            <hr>
+          <div class="row">
+            <div class="col-1 text-danger pt-1"><i class="{{ $expertise['icon'] }} mdi-36px"></i></div>
+            <div class="col-10 ml-auto mr-3">
+              <h6>{{ $expertise['expertise'] }}</h6>
+              <p class="subtitle"> {{ ucfirst($expertise['description']) }}</p>
+              <hr>
+            </div>
           </div>
-        </div>
         @endforeach
       </div>
     </div>
@@ -142,25 +144,35 @@
           <div class="card">
             <div class="card-header">
               <div class="mt-2">
-                <h4>Expertise</h4>
+                <h4>Work Experiences</h4>
                 <span class="line"></span>
               </div>
             </div>
             <div class="card-body">
-              <h6 class="title text-danger">2017 - Present</h6>
-              <P>UX Developer</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae,
-                cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-              <hr>
-              <h6 class="title text-danger">2016 - 2017</h6>
-              <P>Front-end Developer</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae,
-                cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-              <hr>
-              <h6 class="title text-danger">2015 - 2016</h6>
-              <P>UX Designer</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae,
-                cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
+              @foreach ($experiences as $experience)
+                <h6 class="title text-danger">{{ $experience['low'] }}</h6>
+                <P>{{ $experience['position'] }}</P>
+                <P class="subtitle">
+                  {{ ucfirst($experience['description']) }}
+                </P>
+                <hr>
+              @endforeach              
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="mt-2">
+                <h4>Certifiation</h4>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6 class="title text-danger">Junior Web Programmer (BNSP)</h6>
+              <P>Agustus 2022 - Agustus 2025</P>
+              <P class="subtitle">
+                The BSNP (Badan Sertifikasi Nasional Profesi) awards this certificate for the competence of a junior web programmer. 
+              </P>
+              <hr>          
             </div>
           </div>
         </div>
@@ -173,21 +185,14 @@
               </div>
             </div>
             <div class="card-body">
-              <h6 class="title text-danger">2017 - Present</h6>
-              <P>B.E Computer Engineering</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error corrupti recusandae
-                obcaecati odit repellat ducimus cum, minus tempora aperiam at.</P>
-              <hr>
-              <h6 class="title text-danger">2016 - 2017</h6>
-              <P>Diploma in Computer Engineering</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, id officiis quas
-                placeat quia voluptas dolorum rem animi nostrum quae.aliquid repudiandae saepe!.</P>
-              <hr>
-              <h6 class="title text-danger">2015 - 2016</h6>
-              <P>High School Degree</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae,
-                cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-
+              @foreach ($educations as $education)
+                <h6 class="title text-danger">{{ $education['los'] }}</h6>
+                <P>{{ $education['education'] }}</P>
+                <P class="subtitle">
+                  {{ ucfirst($education['description']) }}
+                </P>
+                <hr>                  
+              @endforeach
             </div>
           </div>
         </div>
@@ -200,36 +205,13 @@
               </div>
             </div>
             <div class="card-body pb-2">
-              <h6>hTL5 &amp; CSS3</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="25"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>JavaScript</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>PHP</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>SQL</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>Laborum</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>Tempora</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+              @foreach ($abilities as $ability)
+                <h6>{{ $ability['skill'] }}</h6>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: {{ $ability['level'] }}%" aria-valuenow="25"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+                </div>                  
+              @endforeach
             </div>
           </div>
           <div class="card">
@@ -240,21 +222,13 @@
               </div>
             </div>
             <div class="card-body pb-2">
-              <h6>English</h6>
+              @foreach ($languages as $language)
+              <h6>{{ ucfirst($language['languages']) }}</h6>
               <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="25"
+                <div class="progress-bar bg-danger" role="progressbar" style="width: {{ $language['level'] }}%" aria-valuenow="25"
                   aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <h6>French</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 45%" aria-valuenow="25"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>Spanish</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 67%" aria-valuenow="50"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+              @endforeach
             </div>
           </div>
         </div>
