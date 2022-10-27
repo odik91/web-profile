@@ -15,31 +15,31 @@
       </a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="{{route('home')}}">
+      <a class="nav-link" href="{{ route('home') }}">
         <span class="menu-title">Dashboard</span>
         <i class="mdi mdi-home menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('intro.index')}}">
+      <a class="nav-link" href="{{ route('intro.index') }}">
         <span class="menu-title">Intro</span>
         <i class="mdi mdi-human-handsup menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('about.index')}}">
+      <a class="nav-link" href="{{ route('about.index') }}">
         <span class="menu-title">About</span>
         <i class="mdi mdi-comment-multiple-outline menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{{route('resume.index')}}">
+      <a class="nav-link" href="{{ route('resume.index') }}">
         <span class="menu-title">Resume</span>
         <i class="mdi mdi-home menu-icon"></i>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="{{ route('portfolio.index') }}">
         <span class="menu-title">Portfolio</span>
         <i class="mdi mdi-barley menu-icon"></i>
       </a>
@@ -57,9 +57,12 @@
       </a>
     </li>
     <li class="nav-item sidebar-actions">
-      <span class="nav-link">
-        <a href="#" class="btn btn-block btn-lg btn-gradient-primary mt-4">Sign Out</a>
-      </span>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST">
+        @csrf
+        <span class="nav-link">
+          <button type="submit" class="btn btn-block btn-lg btn-gradient-primary mt-4">Sign Out</button>
+        </span>
+      </form>
     </li>
   </ul>
 </nav>

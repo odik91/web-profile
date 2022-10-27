@@ -74,11 +74,11 @@
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#service" class="nav-link">Services</a>
           </li>
           <li class="nav-item">
-            <a href="#blog" class="nav-link">Blog</a>
-          </li>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+          </li>          
           <li class="nav-item last-item">
             <a href="#contact" class="nav-link">Contact</a>
           </li>
@@ -156,7 +156,7 @@
                   {{ ucfirst($experience['description']) }}
                 </P>
                 <hr>
-              @endforeach              
+              @endforeach
             </div>
           </div>
           <div class="card">
@@ -170,9 +170,10 @@
               <h6 class="title text-danger">Junior Web Programmer (BNSP)</h6>
               <P>Agustus 2022 - Agustus 2025</P>
               <P class="subtitle">
-                The BSNP (Badan Sertifikasi Nasional Profesi) awards this certificate for the competence of a junior web programmer. 
+                The BSNP (Badan Sertifikasi Nasional Profesi) awards this certificate for the competence of a junior web
+                programmer.
               </P>
-              <hr>          
+              <hr>
             </div>
           </div>
         </div>
@@ -191,7 +192,7 @@
                 <P class="subtitle">
                   {{ ucfirst($education['description']) }}
                 </P>
-                <hr>                  
+                <hr>
               @endforeach
             </div>
           </div>
@@ -208,9 +209,9 @@
               @foreach ($abilities as $ability)
                 <h6>{{ $ability['skill'] }}</h6>
                 <div class="progress mb-3">
-                  <div class="progress-bar bg-danger" role="progressbar" style="width: {{ $ability['level'] }}%" aria-valuenow="25"
-                    aria-valuemin="0" aria-valuemax="100"></div>
-                </div>                  
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: {{ $ability['level'] }}%"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
               @endforeach
             </div>
           </div>
@@ -223,11 +224,11 @@
             </div>
             <div class="card-body pb-2">
               @foreach ($languages as $language)
-              <h6>{{ ucfirst($language['languages']) }}</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: {{ $language['level'] }}%" aria-valuenow="25"
-                  aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+                <h6>{{ ucfirst($language['languages']) }}</h6>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-danger" role="progressbar" style="width: {{ $language['level'] }}%"
+                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
               @endforeach
             </div>
           </div>
@@ -236,128 +237,40 @@
     </div>
   </section>
 
-  <section class="section bg-dark text-center">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-md-6 col-lg-3">
-          <div class="row ">
-            <div class="col-5 text-right text-light border-right py-3">
-              <div class="m-auto"><i class="ti-alarm-clock icon-xl"></i></div>
-            </div>
-            <div class="col-7 text-left py-3">
-              <h1 class="text-danger font-weight-bold font40">500</h1>
-              <p class="text-light mb-1">Hours Worked</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="row">
-            <div class="col-5 text-right text-light border-right py-3">
-              <div class="m-auto"><i class="ti-layers-alt icon-xl"></i></div>
-            </div>
-            <div class="col-7 text-left py-3">
-              <h1 class="text-danger font-weight-bold font40">50K</h1>
-              <p class="text-light mb-1">Project Finished</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="row">
-            <div class="col-5 text-right text-light border-right py-3">
-              <div class="m-auto"><i class="ti-face-smile icon-xl"></i></div>
-            </div>
-            <div class="col-7 text-left py-3">
-              <h1 class="text-danger font-weight-bold font40">200K</h1>
-              <p class="text-light mb-1">Happy Clients</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="row">
-            <div class="col-5 text-right text-light border-right py-3">
-              <div class="m-auto"><i class="ti-heart-broken icon-xl"></i></div>
-            </div>
-            <div class="col-7 text-left py-3">
-              <h1 class="text-danger font-weight-bold font40">2k</h1>
-              <p class="text-light mb-1">Coffee Drinked</p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section class="section bg-dark py-5">
+    <div class="container text-center">
+      <h2 class="text-light font-weight-normal">I Am Available For FreeLance</h2>
     </div>
   </section>
 
   <section class="section" id="service">
     <div class="container">
-      <h2 class="mb-5 pb-4"><span class="text-danger">My</span> Services</h2>
+      <h2 class="mb-4 pb-4"><span class="text-danger">My</span> Services</h2>
       <div class="row">
-        <div class="col-md-4 col-sm-6">
-          <div class="card mb-5">
-            <div class="card-header has-icon">
-              <i class="ti-vector text-danger" aria-hidden="true"></i>
-            </div>
-            <div class="card-body px-4 py-3">
-              <h5 class="mb-3 card-title text-dark">Ullam</h5>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident,
-                dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi,
-                unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla
-                aperiam officia.</P>
-            </div>
-          </div>
-        </div>
         <div class="col-md-4 col-sm-6">
           <div class="card mb-5">
             <div class="card-header has-icon">
               <i class="ti-write text-danger" aria-hidden="true"></i>
             </div>
             <div class="card-body px-4 py-3">
-              <h5 class="mb-3 card-title text-dark">Asperiores</h5>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident,
-                dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi,
-                unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla
-                aperiam officia.</P>
+              <h5 class="mb-3 card-title text-dark">Web Development</h5>
+              <P class="subtitle">
+                You want to create a website or a website-based application. You can rely on me as a web developer to create websites and applications that will help you promote your business and simplify your operations. You don't have to wait any longer. I have these abilities, as evidenced by the attachments to my portfolio.
+              </P>
             </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="card mb-5">
             <div class="card-header has-icon">
-              <i class="ti-package text-danger" aria-hidden="true"></i>
+              <i class="ti-vector text-danger" aria-hidden="true"></i>
             </div>
             <div class="card-body px-4 py-3">
-              <h5 class="mb-3 card-title text-dark">Tempora</h5>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident,
-                dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi,
-                unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla
-                aperiam officia.</P>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="card mb-5">
-            <div class="card-header has-icon">
-              <i class="ti-map-alt text-danger" aria-hidden="true"></i>
-            </div>
-            <div class="card-body px-4 py-3">
-              <h5 class="mb-3 card-title text-dark">Provident</h5>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident,
-                dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi,
-                unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla
-                aperiam officia.</P>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="card mb-5">
-            <div class="card-header has-icon">
-              <i class="ti-bar-chart text-danger" aria-hidden="true"></i>
-            </div>
-            <div class="card-body px-4 py-3">
-              <h5 class="mb-3 card-title text-dark">Consectetur</h5>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident,
-                dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi,
-                unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla
-                aperiam officia.</P>
+              <h5 class="mb-3 card-title text-dark">Graphic Design</h5>
+              <P class="subtitle">
+                I have over four years of experience in the digital printing industry, and I am capable of designing a product to produce printed products for promotional purposes, among other things. You can hire me as a coworker if you need a design for print media. 
+              </P>
+              <br>
             </div>
           </div>
         </div>
@@ -367,97 +280,15 @@
               <i class="ti-support text-danger" aria-hidden="true"></i>
             </div>
             <div class="card-body px-4 py-3">
-              <h5 class="mb-3 card-title text-dark">Veritatis</h5>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam commodi provident,
-                dolores reiciendis enim pariatur error optio, tempora ex, nihil nesciunt! In praesentium sunt commodi,
-                unde ipsam ex veritatis laboriosam dolor asperiores suscipit blanditiis, dignissimos quos nesciunt nulla
-                aperiam officia.</P>
+              <h5 class="mb-3 card-title text-dark">Consultation</h5>
+              <P class="subtitle">
+                You have a problem in the world of advertising design or a website application that you want to make a reality. You should not be hesitant to discuss it with me, and I will gladly provide the best input to solve problems with my skills and experience. 
+              </P>
+              <br>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section bg-custom-gray" id="price">
-    <div class="container">
-      <h1 class="mb-5"><span class="text-danger">Packs</span> Pricing</h1>
-      <div class="row align-items-center">
-        <div class="col-md-6 col-lg-3">
-          <div class="price-card text-center mb-4">
-            <h3 class="price-card-title">Free</h3>
-            <div class="price-card-cost">
-              <sup class="ti-money"></sup>
-              <span class="num">0</span>
-              <span class="date">MO</span>
-            </div>
-            <ul class="list">
-              <li class="list-item">5 <span class="text-muted">Project</span></li>
-              <li class="list-item">1GB <span class="text-muted">Storage</span></li>
-              <li class="list-item"><span class="text-muted">No Domain</span></li>
-              <li class="list-item">1 <span class="text-muted">User</span></li>
-            </ul>
-            <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="price-card text-center mb-4">
-            <h3 class="price-card-title">Basic</h3>
-            <div class="price-card-cost">
-              <sup class="ti-money"></sup>
-              <span class="num">10</span>
-              <span class="date">MO</span>
-            </div>
-            <ul class="list">
-              <li class="list-item">50 <span class="text-muted">Project</span></li>
-              <li class="list-item">10GB <span class="text-muted">Storage</span></li>
-              <li class="list-item">1<span class="text-muted">Domain</span></li>
-              <li class="list-item">5 <span class="text-muted">User</span></li>
-            </ul>
-            <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="price-card text-center price-card-requried mb-4">
-            <h3 class="price-card-title">Exclusive</h3>
-            <div class="price-card-cost">
-              <sup class="ti-money"></sup>
-              <span class="num">25</span>
-              <span class="date">MO</span>
-            </div>
-            <ul class="list">
-              <li class="list-item">150 <span class="text-muted">Project</span></li>
-              <li class="list-item">15GB <span class="text-muted">Storage</span></li>
-              <li class="list-item">5<span class="text-muted"> Domain</span></li>
-              <li class="list-item">15<span class="text-muted">User</span></li>
-            </ul>
-            <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="price-card text-center mb-4">
-            <h3 class="price-card-title">Pro</h3>
-            <div class="price-card-cost">
-              <sup class="ti-money"></sup>
-              <span class="num">99</span>
-              <span class="date">MO</span>
-            </div>
-            <ul class="list">
-              <li class="list-item">500 <span class="text-muted">Project</span></li>
-              <li class="list-item">1000GB <span class="text-muted">Storage</span></li>
-              <li class="list-item">10<span class="text-muted"> Domain</span></li>
-              <li class="list-item">Unlimite<span class="text-muted">User</span></li>
-            </ul>
-            <button class="btn btn-primary btn-rounded w-lg">Subscribe</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section bg-dark py-5">
-    <div class="container text-center">
-      <h2 class="text-light mb-5 font-weight-normal">I Am Available For FreeLance</h2>
-      <button class="btn bg-primary w-lg">Hire me</button>
     </div>
   </section>
 
@@ -467,281 +298,52 @@
       <h1 class="mb-5"><span class="text-danger">My</span> Portfolio</h1>
       <div class="portfolio">
         <div class="filters">
-          <a href="#" data-filter=".new" class="active">
-            New
-          </a>
-          <a href="#" data-filter=".advertising">
-            Advertising
-          </a>
-          <a href="#" data-filter=".branding">
-            Branding
+          <a href="#" data-filter=".all" class="active">
+            All
           </a>
           <a href="#" data-filter=".web">
             Web
           </a>
+          <a href="#" data-filter=".graphic">
+            Graphic
+          </a>
+          <a href="#" data-filter=".etc">
+            Etc
+          </a>
         </div>
         <div class="portfolio-container">
-          <div class="col-md-6 col-lg-4 web new">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/web-1.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/web-1.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">WEB</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+          @foreach ($portfolios as $portfolio)
+            <div class="col-md-6 col-lg-4 {{ strtolower($portfolio->getCategory['category']) }} new all">
+              <div class="portfolio-item">
+                <img src="{{ asset('image/' . $portfolio['image']) }}" class="img-fluid"
+                  alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                <div class="content-holder">
+                  <a class="img-popup" href="{{ asset('image/' . $portfolio['image']) }}"></a>
+                  <div class="text-holder">
+                    <h6 class="title">{{ ucwords($portfolio->getCategory['category']) }}</h6>
+                    <div class="subtitle text-white bg-light p-2 rounded mb-2">
+                      {!! $portfolio['description'] !!}
+                    </div>
+                    @if ($portfolio['public'] == 'none' && $portfolio['admin'] == 'none')
+                    <a href="#" class="btn btn-light">Preview not available</a>
+                    @else
+                        @if ($portfolio['public'] != 'none')
+                          <a href="{{$portfolio['public']}}" class="btn btn-light" target="_blank">Visit admin page</a>  
+                        @endif
+                        @if ($portfolio['admin'] != 'none')
+                          <a href="{{$portfolio['admin']}}" class="btn btn-light" target="_blank">Visit public page</a>
+                        @endif
+                    @endif                    
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-6 col-lg-4 web new">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/web-2.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/web-2.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">WEB</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 advertising new">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/advertising-2.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/advertising-2.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">ADVERSTISING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 web">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/web-4.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/web-4.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">WEB</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 advertising">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/advertising-1.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/advertising-1.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">ADVERSITING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 web new">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/web-3.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/web-3.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">WEB</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 advertising new">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/advertising-3.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/advertising-3.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">ADVERSITING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 advertising new">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/advertising-4.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/advertising-4.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">ADVERTISING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-6 col-lg-4 branding new">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/branding-1.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/branding-1.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">BRANDING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 branding">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/branding-2.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/branding-2.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">BRANDING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 branding new">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/branding-3.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/branding-3.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">BRANDING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 branding">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/branding-4.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/branding-4.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">BRANDING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 branding">
-            <div class="portfolio-item">
-              <img src="{{ asset('pub-template/assets/imgs/branding-5.jpg') }}" class="img-fluid"
-                alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-              <div class="content-holder">
-                <a class="img-popup" href="{{ asset('pub-template/assets/imgs/branding-5.jpg') }}"></a>
-                <div class="text-holder">
-                  <h6 class="title">BRANDING</h6>
-                  <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>
   </section>
   <!-- End of portfolio section -->
-
-  <section class="section" id="blog">
-    <div class="container">
-      <h2 class="mb-5">Latest <span class="text-danger">News</span></h2>
-      <div class="row">
-        <div class="blog-card">
-          <div class="img-holder">
-            <img src="{{ asset('pub-template/assets/imgs/blog1.jpg') }}"
-              alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-          </div>
-          <div class="content-holder">
-            <h6 class="title">Consectetur adipisicing elit</h6>
-
-            <p class="post-details">
-              <a href="#">By: Admin</a>
-              <a href="#"><i class="ti-heart text-danger"></i> 234</a>
-              <a href="#"><i class="ti-comment"></i> 123</a>
-            </p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nesciunt qui sit velit delectus
-              voluptates, repellat ipsum culpa id deleniti. Rerum debitis facilis accusantium neque numquam mollitia
-              modi quasi distinctio.</p>
-
-            <p><b>Necessitatibus nihil impedit! Ex nisi eveniet, dolor aliquid consequuntur repudiandae.</b></p>
-            <p>Magnam in repellat enim harum omnis aperiam! Explicabo illo, commodi, dolor blanditiis cupiditate harum
-              nisi vero accusamus laudantium voluptatibus dolores quae obcaecati.</p>
-
-            <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-          </div>
-        </div><!-- end of blog wrapper -->
-
-        <!-- blog-card -->
-        <div class="blog-card">
-          <div class="img-holder">
-            <img src="{{ asset('pub-template/assets/imgs/blog2.jpg') }}"
-              alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-          </div>
-          <div class="content-holder">
-            <h6 class="title">Explicabo illo</h6>
-
-            <p class="post-details">
-              <a href="#">By: Admin</a>
-              <a href="#"><i class="ti-heart text-danger"></i> 456</a>
-              <a href="#"><i class="ti-comment"></i> 264</a>
-            </p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit excepturi laborum enim, vitae ipsam
-              atque eum, ad iusto consequuntur voluptas, esse doloribus. Perferendis porro quisquam vitae exercitationem
-              aliquid, minus eos laborum repudiandae, cumque debitis iusto omnis praesentium? Laborum placeat sit
-              adipisci illum tempore maxime, esse qui quae? Molestias excepturi corporis similique doloribus. Esse vitae
-              earum architecto nulla non dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum
-              facere, delectus eum commodi soluta distinctio sit repudiandae possimus sunt. Ipsum, rem.</p>
-
-            <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-          </div>
-        </div><!-- end of blog wrapper -->
-        <!-- blog-card -->
-        <div class="blog-card">
-          <div class="img-holder">
-            <img src="{{ asset('pub-template/assets/imgs/blog3.jpg') }}"
-              alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-          </div>
-          <div class="content-holder">
-            <h4 class="title">Porro Quisqua</h4>
-
-            <p class="post-details">
-              <a href="#">By: Admin</a>
-              <a href="#"><i class="ti-heart text-danger"></i> 431</a>
-              <a href="#"><i class="ti-comment"></i> 312</a>
-            </p>
-
-            <p> consectetur adipisicing elit. Impedit excepturi laborum enim, vitae ipsam atque eum, ad iusto
-              consequuntur voluptas, esse doloribus. Perferendis porro quisquam vitae exercitationem aliquid, minus eos
-              laborum repudiandae, cumque debitis iusto omnis praesentium? Laborum placeat sit adipisci illum tempore
-              maxime, esse qui quae? Molestias excepturi corporis similique doloribus. Esse vitae earum architecto nulla
-              non dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum facere, delectus eum
-              commodi soluta distinctio sit repudiandae possimus sunt. Ipsum, rem.</p>
-
-            <a href="#" class="read-more">Read more <i class="ti-angle-double-right"></i></a>
-          </div>
-        </div><!-- end of blog wrapper -->
-
-      </div>
-    </div>
-  </section>
 
   <div class="section contact" id="contact">
     <div id="map" class="map"></div>

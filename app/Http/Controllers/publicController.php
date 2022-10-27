@@ -10,6 +10,7 @@ use App\Models\Expertise;
 use App\Models\introModel;
 use App\Models\Language;
 use App\Models\PersonalInfo;
+use App\Models\Portfolio;
 use App\Models\skillListModel;
 use App\Models\socialMediaModel;
 use Illuminate\Http\Request;
@@ -34,7 +35,8 @@ class publicController extends Controller
         $educations = Education::orderBy('id', 'asc')->get();
         $abilities = Ability::orderBy('id', 'asc')->get();
         $languages = Language::orderBy('id', 'asc')->get();
-        return view('portfolio.index', compact('title', 'intro', 'skillLists', 'socialMedias', 'elevator', 'personalInfo', 'expertises', 'experiences', 'educations', 'abilities', 'languages'));
+        $portfolios = Portfolio::orderBy('id', 'asc')->get();
+        return view('portfolio.index', compact('title', 'intro', 'skillLists', 'socialMedias', 'elevator', 'personalInfo', 'expertises', 'experiences', 'educations', 'abilities', 'languages', 'portfolios'));
     }
 
     /**

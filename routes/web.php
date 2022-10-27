@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\MainController;
+use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\ResumeController;
 use App\Http\Controllers\publicController;
 use Illuminate\Support\Facades\Route;
@@ -24,7 +25,7 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('/intro', MainController::class);
     Route::post('/intro-skill', [MainController::class, 'addSkill'])->name('intro.addSkill');
@@ -49,6 +50,11 @@ Route::group(['prefix' => 'admin'], function () {
     Route::match(['put', 'patch'], '/ability/{id}', [ResumeController::class, 'editAbility'])->name('resume.editAbility');
     Route::post('/languages', [ResumeController::class, 'addLanguage'])->name('resume.addLanguage');
     Route::match(['put', 'patch'], '/languages/{id}', [ResumeController::class, 'editLanguage'])->name('resume.editLanguage');
+
+    Route::resource('/portfolio', PortfolioController::class);
+    Route::post('/manage-portfolio', [PortfolioController::class, 'addPortfolio'])->name('portfolio.addPortfolio');
+    Route::match(['put', 'patch'], '/manage-portfolio/{id}', [PortfolioController::class, 'editPortfolio'])->name('portfolio.editPortfolio');
+    Route::delete('/manage-portfolio/{id}', [PortfolioController::class, 'deletePortfolio'])->name('portfolio.deletePortfolio');
 });
 
 Route::resource('/', publicController::class);
