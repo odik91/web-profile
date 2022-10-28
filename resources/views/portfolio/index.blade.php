@@ -17,8 +17,8 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-  <a href="components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i
-      class="ti-shift-left-alt"></i> Components</a>
+  {{-- <a href="components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i
+      class="ti-shift-left-alt"></i> Components</a> --}}
   <header class="header">
     <div class="container">
       <ul class="social-icons pt-3">
@@ -78,7 +78,7 @@
           </li>
           <li class="nav-item">
             <a href="#portfolio" class="nav-link">Portfolio</a>
-          </li>          
+          </li>
           <li class="nav-item last-item">
             <a href="#contact" class="nav-link">Contact</a>
           </li>
@@ -255,7 +255,10 @@
             <div class="card-body px-4 py-3">
               <h5 class="mb-3 card-title text-dark">Web Development</h5>
               <P class="subtitle">
-                You want to create a website or a website-based application. You can rely on me as a web developer to create websites and applications that will help you promote your business and simplify your operations. You don't have to wait any longer. I have these abilities, as evidenced by the attachments to my portfolio.
+                You want to create a website or a website-based application. You can rely on me as a web developer to
+                create websites and applications that will help you promote your business and simplify your operations.
+                You don't have to wait any longer. I have these abilities, as evidenced by the attachments to my
+                portfolio.
               </P>
             </div>
           </div>
@@ -268,7 +271,9 @@
             <div class="card-body px-4 py-3">
               <h5 class="mb-3 card-title text-dark">Graphic Design</h5>
               <P class="subtitle">
-                I have over four years of experience in the digital printing industry, and I am capable of designing a product to produce printed products for promotional purposes, among other things. You can hire me as a coworker if you need a design for print media. 
+                I have over four years of experience in the digital printing industry, and I am capable of designing a
+                product to produce printed products for promotional purposes, among other things. You can hire me as a
+                coworker if you need a design for print media.
               </P>
               <br>
             </div>
@@ -282,7 +287,9 @@
             <div class="card-body px-4 py-3">
               <h5 class="mb-3 card-title text-dark">Consultation</h5>
               <P class="subtitle">
-                You have a problem in the world of advertising design or a website application that you want to make a reality. You should not be hesitant to discuss it with me, and I will gladly provide the best input to solve problems with my skills and experience. 
+                You have a problem in the world of advertising design or a website application that you want to make a
+                reality. You should not be hesitant to discuss it with me, and I will gladly provide the best input to
+                solve problems with my skills and experience.
               </P>
               <br>
             </div>
@@ -325,15 +332,17 @@
                       {!! $portfolio['description'] !!}
                     </div>
                     @if ($portfolio['public'] == 'none' && $portfolio['admin'] == 'none')
-                    <a href="#" class="btn btn-light">Preview not available</a>
+                      <a href="#" class="btn btn-light">Preview not available</a>
                     @else
-                        @if ($portfolio['public'] != 'none')
-                          <a href="{{$portfolio['public']}}" class="btn btn-light" target="_blank">Visit admin page</a>  
-                        @endif
-                        @if ($portfolio['admin'] != 'none')
-                          <a href="{{$portfolio['admin']}}" class="btn btn-light" target="_blank">Visit public page</a>
-                        @endif
-                    @endif                    
+                      @if ($portfolio['public'] != 'none')
+                        <a href="{{ $portfolio['public'] }}" class="btn btn-light" target="_blank">Visit admin
+                          page</a>
+                      @endif
+                      @if ($portfolio['admin'] != 'none')
+                        <a href="{{ $portfolio['admin'] }}" class="btn btn-light" target="_blank">Visit public
+                          page</a>
+                      @endif
+                    @endif
                   </div>
                 </div>
               </div>
@@ -345,11 +354,11 @@
   </section>
   <!-- End of portfolio section -->
 
-  <div class="section contact" id="contact">
-    <div id="map" class="map"></div>
+  <div class="section contact bg-warning" id="contact">
+    {{-- <div id="map" class="map"></div> --}}
     <div class="container">
       <div class="row">
-        <div class="col-lg-8">
+        {{-- <div class="col-lg-8">
           <div class="contact-form-card">
             <h4 class="contact-title">Send a message</h4>
             <form action="">
@@ -367,8 +376,8 @@
               </div>
             </form>
           </div>
-        </div>
-        <div class="col-lg-4">
+        </div> --}}
+        <div class="col">
           <div class="contact-info-card">
             <h4 class="contact-title">Get in touch</h4>
             <div class="row mb-2">
@@ -376,7 +385,9 @@
                 <i class="ti-mobile icon-md"></i>
               </div>
               <div class="col-10 ">
-                <h6 class="d-inline">Phone : <br> <span class="text-muted">+ (123) 456-789</span></h6>
+                <h6 class="d-inline">Phone : <br> <span class="text-muted">
+                    {{ $personalInfo['phone'] }} (+62)
+                </h6>
               </div>
             </div>
             <div class="row mb-2">
@@ -384,7 +395,7 @@
                 <i class="ti-map-alt icon-md"></i>
               </div>
               <div class="col-10">
-                <h6 class="d-inline">Address :<br> <span class="text-muted">12345 Fake ST NoWhere AB Country.</span>
+                <h6 class="d-inline">Address :<br> <span class="text-muted">{{ $personalInfo['address'] }}</span>
                 </h6>
               </div>
             </div>
@@ -393,20 +404,17 @@
                 <i class="ti-envelope icon-md"></i>
               </div>
               <div class="col-10">
-                <h6 class="d-inline">Email :<br> <span class="text-muted">info@website.com</span></h6>
+                <h6 class="d-inline">Email :<br> <span class="text-muted">{{ $personalInfo['email'] }}</span></h6>
               </div>
             </div>
-            <ul class="social-icons pt-4">
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-facebook"
-                    aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-twitter"
-                    aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-google"
-                    aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-instagram"
-                    aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-github"
-                    aria-hidden="true"></i></a></li>
+            <ul class="social-icons pt-4 mx-auto">
+              @foreach ($socialMedias as $socialMedia)
+                <li class="social-item">
+                  <a class="social-link text-lidarkght" href="{{ $socialMedia['link'] }}" target="_blank">
+                    <i class="{{ $socialMedia['icon'] }} mdi-24px" aria-hidden="true"></i>
+                  </a>
+                </li>
+              @endforeach
             </ul>
           </div>
         </div>
@@ -417,7 +425,7 @@
   <footer class="footer py-3">
     <div class="container">
       <p class="small mb-0 text-light">
-        &copy;
+        Ali Shoddiqien &copy;
         <script>
           document.write(new Date().getFullYear())
         </script> Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com"

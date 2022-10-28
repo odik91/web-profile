@@ -31,8 +31,8 @@ class publicController extends Controller
         $elevator = ElevatorPicth::first();
         $personalInfo = PersonalInfo::first();
         $expertises = Expertise::orderBy('id', 'asc')->get();
-        $experiences = Experience::orderBy('id', 'asc')->get();
-        $educations = Education::orderBy('id', 'asc')->get();
+        $experiences = Experience::orderBy('id', 'desc')->get();
+        $educations = Education::orderBy('id', 'desc')->get();
         $abilities = Ability::orderBy('id', 'asc')->get();
         $languages = Language::orderBy('id', 'asc')->get();
         $portfolios = Portfolio::orderBy('id', 'asc')->get();

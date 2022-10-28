@@ -176,7 +176,7 @@
                                 </div>
                                 <div class="modal-body">
                                   <form class="forms-sample" method="POST"
-                                    action="{{ route('portfolio.editPortfolio', [$portfolio['id']]) }}">
+                                    action="{{ route('portfolio.editPortfolio', [$portfolio['id']]) }}" enctype="multipart/form-data">
                                     @csrf
                                     @method('PATCH')
                                     <div class="form-group">

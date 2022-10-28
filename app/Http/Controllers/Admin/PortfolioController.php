@@ -135,10 +135,10 @@ class PortfolioController extends Controller
             'image' => 'required|mimes:jpg,jpeg,png',
             'public' => 'required|min:4|max:150',
             'admin' => 'required|min:4|max:150',
-        ]);
+        ]);        
 
         $image = null;
-        if ($request->file('image')) {
+        if ($request->hasFile('image')) {
             $image = time() . $request['image']->hashName();
             $pathImage = public_path('/image');
             $resizeImage = Image::make($request['image']->path());
@@ -170,28 +170,29 @@ class PortfolioController extends Controller
         $this->validate($request, [
             'category' => 'required',
             'description' => 'required|min:5',
+            'image' => 'mimes:jpg,jpeg,png',
             'public' => 'required|min:4|max:150',
             'admin' => 'required|min:4|max:150',
         ]);
 
         $portfolio = Portfolio::find($id);
 
-        $image = $portfolio['image'];
+        $imageName = $portfolio['image'];
 
-        if ($request->file('image')) {
-            unlink(public_path("image/{$image}"));
-            $image = time() . $request['image']->hashName();
+        if ($request->hasFile('image')) {
+            unlink(public_path("image/{$imageName}"));
+            $imageName = time() . $request['image']->hashName();
             $pathImage = public_path('/image');
             $resizeImage = Image::make($request['image']->path());
             $resizeImage->resize(1600, 1600, function ($const) {
                 $const->aspectRatio();
-            })->save($pathImage . '/' . $image);
+            })->save($pathImage . '/' . $imageName);
         }
 
         $data = [
             'category_id' => $request['category'],
             'description' => $request['description'],
-            'image' => $image,
+            'image' => $imageName,
             'public' => $request['public'],
             'admin' => $request['admin'],
         ];
