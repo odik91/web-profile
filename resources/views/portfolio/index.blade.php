@@ -335,11 +335,11 @@
                       <a href="#" class="btn btn-light">Preview not available</a>
                     @else
                       @if ($portfolio['public'] != 'none')
-                        <a href="{{ $portfolio['public'] }}" class="btn btn-light" target="_blank">Visit admin
+                        <a href="{{ $portfolio['public'] }}" class="btn btn-light" target="_blank">Visit public
                           page</a>
                       @endif
                       @if ($portfolio['admin'] != 'none')
-                        <a href="{{ $portfolio['admin'] }}" class="btn btn-light" target="_blank">Visit public
+                        <a href="{{ $portfolio['admin'] }}" class="btn btn-light" target="_blank">Visit admin
                           page</a>
                       @endif
                     @endif
