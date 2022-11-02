@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Intervention\Image\Facades\Image;
 
+use function PHPUnit\Framework\fileExists;
+
 class PortfolioController extends Controller
 {
     /**
@@ -180,7 +182,9 @@ class PortfolioController extends Controller
         $imageName = $portfolio['image'];
 
         if ($request->hasFile('image')) {
-            unlink(public_path("image/{$imageName}"));
+            if (fileExists(public_path("image/{$imageName}"))) {
+                unlink(public_path("image/{$imageName}"));
+            }
             $imageName = time() . $request['image']->hashName();
             $pathImage = public_path('/image');
             $resizeImage = Image::make($request['image']->path());
@@ -215,7 +219,9 @@ class PortfolioController extends Controller
         $delete = $portfolio->delete();
 
         if ($delete) {
-            unlink(public_path("image/{$image}"));
+            if (fileExists(public_path("image/{$image}"))) {
+                unlink(public_path("image/{$image}"));
+            }
             Session::flash('success', "Portfolio has been deleted");
         } else {
             Session::flash('error', "Fail to delete portfolio");
