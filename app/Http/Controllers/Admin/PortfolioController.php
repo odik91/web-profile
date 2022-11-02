@@ -182,7 +182,7 @@ class PortfolioController extends Controller
         $imageName = $portfolio['image'];
 
         if ($request->hasFile('image')) {
-            if (fileExists(public_path("image/{$imageName}"))) {
+            if (file_exists(public_path("image/{$imageName}"))) {
                 unlink(public_path("image/{$imageName}"));
             }
             $imageName = time() . $request['image']->hashName();
@@ -219,7 +219,7 @@ class PortfolioController extends Controller
         $delete = $portfolio->delete();
 
         if ($delete) {
-            if (fileExists(public_path("image/{$image}"))) {
+            if (file_exists(public_path("image/{$image}"))) {
                 unlink(public_path("image/{$image}"));
             }
             Session::flash('success', "Portfolio has been deleted");
